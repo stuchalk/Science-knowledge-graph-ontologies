@@ -16,7 +16,7 @@
 @prefix cpannotationschema: <http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#> .
 @base <https://w3id.org/skgo/modsci#> .
 
-<https://w3id.org/skgo/modsci#> rdf:type owl:Ontology ;
+modsci: rdf:type owl:Ontology ;
                                  owl:versionIRI <https://w3id.org/skgo/modsci/1.1> ;
                                  owl:imports <http://www.w3.org/2004/02/skos/core> ;
                                  dc:creator <https://orcid.org/0000-0002-2818-5890> ;
@@ -80,8 +80,8 @@ terms:created rdf:type owl:AnnotationProperty .
 
 ###  http://purl.org/dc/terms/date
 terms:date rdf:type owl:AnnotationProperty ;
-           terms:bibliographicCitation "[W3CDTF] http://www.w3.org/TR/NOTE-datetime" ;
-           rdfs:comment "Date may be used to express temporal information at any level of granularity. Recommended best practice is to use an encoding scheme, such as the W3CDTF profile of ISO 8601 [W3CDTF]."@en-us ;
+           terms:bibliographicCitation "[W3C-DTF] http://www.w3.org/TR/NOTE-datetime" ;
+           rdfs:comment "Date may be used to express temporal information at any level of granularity. Recommended best practice is to use an encoding scheme, such as the W3C DTF profile of ISO 8601 [W3C-DTF]."@en-us ;
            rdfs:label "Date"@en-us ;
            rdfs:seeAlso <http://www.w3.org/TR/NOTE-datetime> ;
            skos:definition "A point or period of time associated with an event in the lifecycle of the resource."@en-us ;
@@ -171,7 +171,7 @@ modsci:appliesLawsFrom rdf:type owl:ObjectProperty ,
                                 owl:AsymmetricProperty ;
                        rdfs:domain modsci:ModernScience ;
                        rdfs:range modsci:ModernScience ;
-                       rdfs:comment "Science applies lows from anthoer one."@en ;
+                       rdfs:comment "Science applies laws from another one."@en ;
                        rdfs:label "applies laws from"@en .
 
 
@@ -401,7 +401,7 @@ modsci:instrumentInventedBy rdf:type owl:ObjectProperty ;
                             owl:inverseOf modsci:inventsInstrument ;
                             rdfs:domain modsci:ScientificInstrument ;
                             rdfs:range modsci:Scientist ;
-                            rdfs:comment "An instrument is invented by a sciientist."@en ;
+                            rdfs:comment "An instrument is invented by a scientist."@en ;
                             rdfs:label "instrument invented by"@en .
 
 
@@ -425,7 +425,7 @@ modsci:interestedInPhenomenon rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/skgo/modsci#inventsInstrument
 modsci:inventsInstrument rdf:type owl:ObjectProperty ;
-                         rdfs:comment "A sciientist invents an instrument ."@en ;
+                         rdfs:comment "A scientist invents an instrument ."@en ;
                          rdfs:label "invents instrument"@en .
 
 
@@ -592,7 +592,7 @@ modsci:takeSunstancesFrom rdf:type owl:ObjectProperty ,
                                       ] ;
                           rdfs:range modsci:ModernScience ;
                           rdfs:comment "A science takes substances from another science."@en ;
-                          rdfs:label "takes sunstances from"@en .
+                          rdfs:label "takes substances from"@en .
 
 
 ###  https://w3id.org/skgo/modsci#undertakesResearch
@@ -645,7 +645,7 @@ modsci:usesTechniquesFrom rdf:type owl:ObjectProperty ,
 modsci:InstrumentFunctionDesription rdf:type owl:DatatypeProperty ;
                                     rdfs:domain modsci:ScientificInstrument ;
                                     rdfs:range xsd:string ;
-                                    rdfs:label "Instrument function desription"@en .
+                                    rdfs:label "Instrument function description"@en .
 
 
 #################################################################
@@ -2081,7 +2081,7 @@ modsci:Metrology rdf:type owl:Class ;
 ###  https://w3id.org/skgo/modsci#MilitaryScience
 modsci:MilitaryScience rdf:type owl:Class ;
                        rdfs:subClassOf modsci:AppliedSciences ;
-                       rdfs:comment "Military science is the study of military processes, dentsciitutions, and behavior, along with the study of warfare, and the theory and application of organized coercive force." ;
+                       rdfs:comment "Military science is the study of military processes, institutions, and behavior, along with the study of warfare, and the theory and application of organized coercive force." ;
                        rdfs:label "Military Science" .
 
 
@@ -2637,7 +2637,7 @@ modsci:ScientificInstrument rdf:type owl:Class ;
 
 ###  https://w3id.org/skgo/modsci#ScientificInstrumentManufacturer
 modsci:ScientificInstrumentManufacturer rdf:type owl:Class ;
-                                        rdfs:comment "Companies manufacturing equipment for scientific sstudies." ;
+                                        rdfs:comment "Companies manufacturing equipment for scientific studies." ;
                                         rdfs:label "Scientific Instrument Manufacturer" .
 
 
